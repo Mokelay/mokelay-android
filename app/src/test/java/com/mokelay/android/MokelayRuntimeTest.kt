@@ -381,9 +381,9 @@ class MokelayRuntimeTest {
     private fun fixtureFile(name: String): File {
         val root = File(System.getProperty("user.dir"))
         val candidates = listOf(
-            File(root, "../mokelay-server/server/assets/mokelay-pages/$name"),
-            File(root, "../../mokelay-server/server/assets/mokelay-pages/$name"),
-            File(root, "submodule/mokelay-server/server/assets/mokelay-pages/$name"),
+            File(root, "../mokelay-server/server/assets/mokelay/pages/$name"),
+            File(root, "../../mokelay-server/server/assets/mokelay/pages/$name"),
+            File(root, "submodule/mokelay-server/server/assets/mokelay/pages/$name"),
         )
         return candidates.firstOrNull { it.isFile }
             ?: error("Fixture not found: $name from ${root.absolutePath}")
